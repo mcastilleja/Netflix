@@ -1,0 +1,659 @@
+@font-face {
+    font-family: "icons";
+    src: url(../font/icons.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body.login {
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.browse, body.user {
+    background: #141414;
+}
+
+a { text-decoration: none; }
+body.login a:hover, body.user a:hover { text-decoration: underline; }
+
+body.login .fondo {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;;
+        z-index: -1;
+        background-color: #000;
+        opacity: .5;     
+}
+
+header {   
+    background: linear-gradient(to bottom,rgba(0,0,0,.5) 0,rgba(0,0,0,0) 100%);
+}
+
+body.login header a {
+    line-height: 90px;
+    margin-left: 3%;  
+}
+
+body.browse header a {
+    padding: 19.5px 60px;
+    display: block;
+}
+
+header a svg{
+    vertical-align: middle;
+}
+
+body.login main, body.login footer {
+    background-color: rgba(0,0,0,.75);
+}
+
+body.login main {
+    padding: 60px 68px 40px;
+    max-width: 314px;
+    margin: 0 auto 90px;
+    border-radius: 4px;
+}
+
+body.login main h1 {
+    color: #FFF;
+    margin: 0 0 25px 0;
+}
+
+
+body.login main input[type="text"], body.login main input[type="password"] {
+    background: #333;
+    border-radius: 4px;
+    border: 0;
+    color: #8c8c8c;
+    width: 95%;
+    padding: 16px 0 16px 20px;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+body.login main input[type="text"]:focus, body.login main input[type="password"]:focus {
+    outline: none;
+}
+
+body.login main button {
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    margin: 24px 0 12px;
+    padding: 16px;
+    color: #FFF;
+    background: #e50914;
+    cursor: pointer;
+    user-select: none;
+}
+
+body.login main form {
+    margin-bottom: 60px;
+}
+
+body.login main .flex{
+    display: flex;
+    justify-content:space-between;
+}
+
+body.login main .recuerdame input[type="checkbox"]:checked ~ .checkmark {
+    background-color: #333;
+    border-radius: 4px;
+}
+
+body.login main .recuerdame {
+        position: relative;
+        padding-top: 2px;
+        padding-left: 25px;
+        margin-bottom: 12px;
+        font-size: 13px;
+        color: #b3b3b3;
+        user-select: none;
+}
+
+body.login main .recuerdame input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+}
+
+body.login main .recuerdame .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 4px;
+}
+  
+body.login main .recuerdame:hover input ~ .checkmark {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+  
+body.login main .recuerdame .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+body.login main .recuerdame input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+body.login main .recuerdame .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 3px;
+    height: 8px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+body.login main a.ayuda {
+    color: #b3b3b3;
+    font-size: 13px;
+    padding-top: 2px;
+}
+
+body.login main p.text {
+    font-size: 16px;
+    color: #737373;
+}
+
+body.login main p.text a.subscribe {
+    color: #FFF;
+}
+
+body.login main p.text span {
+    font-size: 13px;
+    margin-top: 11px;
+    margin-bottom: 100px;
+    color: #8c8c8c;
+    display: block;
+}
+
+body.login main p.text span a.info{
+    color: #0071eb;
+}
+
+body.login footer, body.user footer { 
+    width: 100%;
+    font-size: 1em;
+    color: #757575;
+    padding-bottom: 20px;
+    margin-top: 100px;
+}
+
+body.login footer nav, body.user footer nav {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+body.login footer nav p, body.user footer nav p {
+    margin-bottom: 30px;
+}
+
+body.login footer nav ul, body.user footer nav ul {
+    padding: 0;
+}
+
+body.login footer nav ul li, body.user footer nav ul li {
+    display:inline-block;
+    width: 24%;
+    min-width: 100px;
+    font-size: 13px;
+    margin-bottom: 16px;
+    vertical-align: top;
+    padding: 0;
+}
+
+body.login footer nav a, body.user footer nav a { 
+    color: #757575;
+}
+
+body.login footer nav .select {
+    position: relative;
+    margin-top: 6px;
+}
+
+body.login footer nav .select::before {
+    content: "a";
+    font-family: "icons";
+    font-size: 28px;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+}
+
+body.login footer nav .select select {
+    background-color: #000;
+    border: 1px solid #333;
+    padding: 15px 5px 15px 45px;
+    font-size: 13px;
+    color: #757575;
+}
+
+/* BROWSE */
+
+body.browse main {
+    width: 60%;
+    margin: 90px auto;
+}
+
+body.browse h1.titulo {
+    width: 100%;
+    color: #fff;
+    font-size: 3.5vw;
+    font-weight: unset;
+    text-align: center;
+    margin: 0.67em 0;
+}
+
+body.browse nav.usuarios {
+    margin: 2em 0;
+}
+
+body.browse nav.usuarios ul {
+    margin: 2em 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+body.browse nav.usuarios ul li{
+    list-style: none;
+    text-align: center;
+}
+
+body.browse nav.usuarios ul li a .imagen {
+    width: 153px;
+    height: 153px;
+    border: 3px solid transparent;
+    border-radius: 3%;
+    position: relative;
+}
+
+body.browse nav.usuarios ul li:hover a .imagen {
+    border-color: #e5e5e5;
+    background-color: #e5e5e5;
+}
+
+body.browse nav.usuarios ul li a .imagen img {
+    width: 100%;
+    border-radius: 3%;
+}
+
+body.browse nav.usuarios ul li a span{
+    color: gray;    
+    display: block;
+    font-size: 1.3vw;
+    margin: 0.6em 0;
+}
+
+body.browse nav.usuarios ul li a p.iconT {
+    font-size: 95px;
+    display: inline-block;
+    border-radius: 50%;
+    color: #141414;
+    background-color: gray;
+    top: 22px;
+    left: 23px;
+    padding: 0px 26px;
+    margin: 0;
+    font-weight: bold;
+    position: absolute;
+}
+
+body.browse nav.usuarios ul li:hover a p.iconT {
+    color: #e5e5e5;
+}
+
+body.browse footer {
+    text-align: center;
+}
+
+body.browse footer button.profile {
+    display: block;
+    font-size: 1.2vw;
+    border: 1px solid grey;
+    color: grey;
+    padding: 0.5em 1.5em;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background-color: transparent;
+    margin: auto;
+}
+
+body.browse footer button.profile:hover {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+/* USER */
+body.user {
+    user-select: none;
+}
+
+body.user header {
+    display: flex;
+    flex: 1;
+    align-items: center ;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+}
+
+body.user header .logo {
+    padding: 0 0 0 50px;
+}
+
+body.user header .menus {
+    flex-grow: 2;
+    padding: 0 50px 0 0;
+}
+
+body.user header .menus, body.user header .menus ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+body.user header .menus ul li{
+    list-style: none; 
+    margin: 0 10px;
+}
+
+body.user header .menus .menu-usuario ul li{
+    cursor: pointer;
+}
+
+body.user header, body.user header .menus ul li a{
+    color: #FFF;
+}
+
+body.user header .menus ul li a:hover{
+   text-decoration: none;
+   color: #b3b3b3;
+}
+
+body.user header .menus ul li a.active {
+    font-weight: bold;
+    cursor: default;
+}
+
+body.user header .menus ul li a.active:hover {
+    color: #FFF;
+}
+
+
+body.user main, body.user footer {
+    background: #141414;
+}
+
+body.user main .shadow {
+    background: linear-gradient(77deg,rgba(0,0,0,.6) 0,rgba(0,0,0,0) 85%);
+    width: 70%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+
+body.user main .big-screen {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    /* top: -67px;
+    z-index: -1;*/
+}
+
+body.user main .big-screen img {
+    width: 100%;
+}
+
+body.user main .contenido {
+    color: #FFF;
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    display: flex;
+}
+
+body.user main .contenido .descripcion{
+    width: 36%;
+    position: relative;
+    left: 60px;
+}
+
+body.user main .logoUmbrella {
+    width: 547px;
+}
+
+body.user main .contenido .descripcion .clasificacion {
+    display: flex;
+    align-items: center;
+    margin: 3px 0;
+}
+
+body.user main .contenido .descripcion h1.bigTitle {
+    font-size: 2.5vw;
+}
+
+body.user main .contenido .descripcion h1 {
+    padding: 0 0 0 15px;
+    font-size: 1.6vw;
+}
+
+body.user main .contenido .descripcion .text {
+    font-size: 1.2vw;
+}
+
+body.user main .contenido .buttons {
+  margin-top: 1.5vw;
+}
+
+body.user main .contenido .buttons button {
+    padding: 11px 27px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 11px;
+    cursor: pointer;
+}
+
+body.user main .contenido .buttons button svg, body.user main .contenido .buttons button span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+body.user main .contenido .buttons button span{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 0 0 7px;
+}
+
+body.user main .contenido .buttons button.play{
+    background-color: white;
+}
+
+body.user main .contenido .buttons button.play:hover{
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+body.user main .contenido .buttons button.info{
+    color: #FFF;
+    background-color: rgba(109, 109, 110, 0.7);
+}
+
+body.user main .contenido .buttons button.info:hover{
+    background-color: rgba(109, 109, 110, 0.4);
+}
+
+.person {
+    margin-bottom: 15px;
+}
+
+.cast {
+    font-size: 13px;
+    margin-top: 26px;
+}
+
+span#elenco {
+    display: inline-block;
+    width: 85%;
+    vertical-align: top;
+    padding-left: 10px;
+}
+
+a.castOriginal {
+    color: #fff;
+}
+
+span.cElenc, span.gMov {
+    color: #a4a4a4;
+}
+
+.back {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    font-size: 31px;
+}
+
+.back a:hover {
+    text-decoration: none !important;
+}
+.back a {
+    color: #FFF;
+}
+
+.relative {
+    position: relative;
+}
+
+svg.iconSearch {
+    position: absolute;
+    top: 5px;
+    left: 8px;
+}
+
+input[type="search"] {
+    background: #000;
+    border: 1px solid #FFF;
+    padding: 8px 8px 8px 36px;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+body.user main .contenido .genero {
+    position: absolute;
+    right: 0;
+    top: 455px;
+    display: flex;
+    justify-content: space-between;
+    width: 187px;
+    align-items: center;
+}
+
+body.user main .contenido .genero button{
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    color: white;
+    border-radius: 50%;
+    padding: 8px 9px 4px 10px;;
+    cursor: pointer;
+}
+
+body.user main .contenido .genero button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.user main .contenido .genero .mature {
+    border: solid 3px #dcdcdc;
+    border-style: none none none solid;
+    background-color: rgba(51,51,51,.6);
+    font-size: 1.1vw;
+    padding: 0.5vw 2.5vw 0.5vw 0.8vw;
+    display: flex;
+    align-items: center;
+    height: 2.4vw;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+body.user main .select {
+    padding: 0 30px;
+    position: relative;
+    top: -111px;
+    margin-bottom: -220px;
+}
+
+body.user main .select .opt{
+    color: #FFF;
+    margin-bottom: 40px;
+}
+
+.title-select {
+    font-size: 22px;
+    margin: 16px 0;
+}
+
+.gallery {
+    display: flex;
+}
+
+.gallery div {
+    width: 288px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.gallery div img {
+    width: 100%;
+}
+
+#busqueda .gallery, #peliculas .gallery {
+    flex-wrap: wrap;
+}
+
+#busqueda .gallery div,  #peliculas .gallery div {
+    padding: 14px 40px;
+}
+
+body.user main .select.searchMovies {
+    position: static;
+    margin: 163px 0 0 0;
+}
+
+body.user footer .code {
+    margin-bottom: 20px;
+    font-size: 13px;
+    padding: 0.5em;
+    color: grey;
+    border: solid 1px grey;
+    background: 0 0;
+    cursor: pointer;
+}
+
+body.user footer .code:hover {
+    color: #FFF;
+} 
+
+body.user footer .copy {
+    font-size: 11px;
+}
