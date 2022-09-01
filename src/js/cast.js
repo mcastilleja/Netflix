@@ -8,8 +8,6 @@ const castMovies = async () => {
     try {
         let response = await axios.get(castUrl)
         let castRes = response.data.results
-
-        console.log(castRes)
         
         constructorArr(castRes, 'Peliculas')
 
